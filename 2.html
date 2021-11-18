@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YU-CHEN KUO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+  <script type="text/javascript">
+        $(document).ready(function() {
+
+            if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+              ){
+
+                    $('#ET').DataTable({
+                      paging:false,
+                      searching:false,
+                      info:false,
+                      columnDefs: [
+                           {
+                               "targets": [2],
+                               "visible": false,
+                           }
+                       ]
+                    });
+                    $('#AP').DataTable({
+                      paging:false,
+                      searching:false,
+                      info:false
+                    });
+                    $('#CC').DataTable({
+                      paging:false,
+                      searching:false,
+                      info:false,
+                      columnDefs: [
+                           {
+                               "targets": [0],
+                               "visible": false,
+                           },
+                           {
+                               "targets": [ 1 ],
+                               "visible": false
+                           },
+                           {
+                               "targets": [ 4 ],
+                               "visible": false
+                           }
+                       ]
+                    });
+                    $('#TS').DataTable({
+                      paging:false,
+                      searching:false,
+                      info:false,
+                      columnDefs: [
+                           {
+                               "targets": [ 0 ],
+                               "visible": false,
+                           },
+                           {
+                               "targets": [ 1 ],
+                               "visible": false
+                           },
+                           {
+                               "targets": [ 4 ],
+                               "visible": false
+                           },
+                           {
+                               "targets": [ 5 ],
+                               "visible": false
+                           },
+                           {
+                               "targets": [ 6 ],
+                               "visible": false
+                           }
+                       ]
+                    });
+              }
+                else {
+
+                      $('#ET').DataTable({
+                        paging:false,
+                        searching:false,
+                        info:false
+                      });
+                      $('#AP').DataTable({
+                        paging:false,
+                        searching:false,
+                        info:false
+                      });
+                      $('#CC').DataTable({
+                        paging:false,
+                        searching:false,
+                        info:false
+                      });
+                      $('#TS').DataTable({
+                        paging:false,
+                        searching:false,
+                        info:false
+                      });
+              }
+
+
+
+        } );
+
+
+  </script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">YU-CHEN KUO</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+         <li class="nav-item">
+          <a class="nav-link" href="#ET">Education & Training</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#AP">Academic Professional</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="#CC">Competitions & Certificates</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" href="#TS">Technology Skills</a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#ContactModal">Contact</a>
+        </li>
+        
+      </ul>
+    </div>
+    
+  </nav>
+
+    <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    <div id="demo" class="carousel slide">
+
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        <li data-target="#demo" data-slide-to="4"></li>
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://drive.google.com/file/d/1ZpkD6FvxVNqZ6pg5NhAqBO2VYZuvafN5/view?usp=sharing/images/dinosaur.jpg" width="1100" height="400">
+            <div class="carousel-caption">
+              <h3>@EECS, NTU, Taipei, 2021</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://drive.google.com/file/d/19ejx6Ier1SJ3rmLZWQujKhLRZLtVlM_u/view?usp=sharing/images/dinosaur.jpg" width="1100" height="400">
+            <div class="carousel-caption">
+              <h3>@Qingtiangang, Taipei, 2020</h3>
+            </div>
+        </div>
+        
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="card">
+        <div class="card-header text-center"><h4>Yu Chen Kuo (郭昱辰)<a href="https://drive.google.com/file/d/1Q5RLbup8QSGIYPElMWzZSyZFx1QZ3v_4/view?usp=sharing" </button class="btn btn-info" role="button">Download CV</a></div></h4>
+        <div class="card-body">
+          <p>
+            <h5>
+            Yu Chen Kuo (郭昱辰) took part in the <a href="https://www.facebook.com/groups/TIMSG/">亞洲機器人大賽</a>in my freshman year and won the <a href="https://drive.google.com/file/d/1IenDQDJOkEbojqALpEMdGJ1NDj02dmoE/view?usp=sharing">fourth place</a> in the group A of universities. In the summer vacation of my sophomore year, I transferred to the <a href="http://mis.web2.ncut.edu.tw/bin/home.php">Department of Information Management of National Chin-Yi University of Technology</a> During my school years, I obtained the <a href="https://www.tairoa.org.tw/"> Taiwan Automation Intelligence and Robotics Assoication </a>,and later successively abtained. <a href="https://drive.google.com/file/d/1kl3nNRZgGil8bU8S8a3CeWhUhnplpi3O/view?usp=sharing"> Machine Learning for All </a> of <a href="https://www.gold.ac.uk/">Goldsmith University of London </a><a href="https://drive.google.com/file/d/1JoAMfExtMuA3C5_FK_NCth02XLxlP6S4/view?usp=sharing">Machine Learning Foundations for Product Managers </a>of <a href="https://www.duke.edu/">Duke University</a>and ,<a href="https://drive.google.com/file/d/1vOWLrMD2u24kK6vzouhVLlc7Sp2sSp2F/view?usp=sharing">(Machine Learning Foundations)--Mathematical Foundations</a>of<a href="https://www.ntu.edu.tw/">National Taiwan University</a>certificate. 
+            </h5>
+          </p>
+        </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <span class="row justify-content-center align-self-center"><h4>Education & Training</h4></span>
+  <table id="ET" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Place</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2014-2017</td>
+        <td><a href="https://www.sphs.hc.edu.tw/ischool/publish_page/32/">Saint Peter Junior High School, Hsinchu, Taiwan</a></td>
+      </tr>
+      <tr>
+        <td>2017-2020</td>
+        <td><a href="https://www.sphs.hc.edu.tw/home">Saint Peter Senior High School, Hsinchu, Taiwan</a></td>
+      </tr>
+      <tr>
+        <td>2020-2021</td>
+        <td><a href="https://www.must.edu.tw/">Minghsin University of Science and Techology , Hsinchu , Taiwan</a></td>
+      </tr>
+      <tr>
+        <td>2021-Present</td>
+        <td><a href="https://www.ncut.edu.tw/">National Chin-Yi University of Technology , Taichung , Taiwan</a></td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td><a href="https://www.ntu.edu.tw/">National Taiwan University , Taipei , Taiwan</a></td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td><a href="https://duke.edu/">Duke University , State of North Carolina , USA</a></td>
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td><a href="https://www.gold.ac.uk/">Goldsmiths University of London , London , UK</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<div class="container">
+  <span class="row justify-content-center align-self-center"><h4>Academic Professional </h4></span>
+  <table id="AP"  class="table table-striped table-bordered" style="width:100%">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Types</th>
+        <th>Items</th>
+        <th>Position</th>
+        <th>Place</th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2021</td>
+        <td>Automation System Integration</td>
+        <td><a href="https://drive.google.com/file/d/16_YLoVmKr14WHS9biHoFlTSjab1gcjwx/view?usp=sharing">Automation System Integration</a></td>
+        <td>Student</td>
+        <td>Taiwan Automation Intelligence and Robotics Assoication</td>
+        
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>Machine Learning</td>
+        <td><a href="https://drive.google.com/file/d/1JoAMfExtMuA3C5_FK_NCth02XLxlP6S4/view?usp=sharing">Machine Learning Foundations for Product Managers</a></td>
+        <td>Student</td>
+        <td>Duke University</td>
+        
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>Machine Learning</td>
+        <td><a href="https://drive.google.com/file/d/1kl3nNRZgGil8bU8S8a3CeWhUhnplpi3O/view?usp=sharing">Machine Learning for All</a></td>
+        <td>Student</td>
+        <td>Goldsmiths University of London</td>
+        
+      </tr>
+      <tr>
+        <td>2021</td>
+        <td>Machine Learning</td>
+        <td><a href="https://drive.google.com/file/d/1vOWLrMD2u24kK6vzouhVLlc7Sp2sSp2F/view?usp=sharing">(Machine Learning Foundations)--Mathematical Foundations</a></td>
+        <td>Student</td>
+        <td>National Taiwan University</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+
+  <br>
+  <br>
+  <div class="container">
+    <span class="row justify-content-center align-self-center"><h4>Competitions & Certificates</h4></span>
+     <table id="CC"  class="table table-striped table-bordered" style="width:100%">
+          <div class="card col-12">
+            <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#Academic certificate"><h5>Academic certificate</h5></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#Contest awards"><h5>Contest awards</h5></a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#About me"><h5>About me</h5></a>
+            </li>
+            
+            </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+              <div class="tab-pane container active" id="Academic certificate">
+                <h6>
+                <br>
+               
+               <br>
+               <li><a href="https://drive.google.com/file/d/1JoAMfExtMuA3C5_FK_NCth02XLxlP6S4/view?usp=sharing">Machine Learning Foundations for Product Mnagers , Duke University</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1kl3nNRZgGil8bU8S8a3CeWhUhnplpi3O/view?usp=sharing">Machine Learning for All, Goldsmiths University of London</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1vOWLrMD2u24kK6vzouhVLlc7Sp2sSp2F/view?usp=sharing">(Machine Learning Foundations)--Mathematical Foundationsof, National Taiwan University</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1jrZvlT2COV0zR8Uyt02ij_KNQ0b0oqyP/view?usp=sharing">United Kingdom CPD, Artificial Intelligence, Certified</li><br>
+                <li><a href="https://drive.google.com/file/d/16_YLoVmKr14WHS9biHoFlTSjab1gcjwx/view?usp=sharing">Machine Learning, Taiwan Automation Intelligence and Robotics Assoication</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1KHMPY00MPbvgPKM50cGABcH_nXJiQQCD/view?usp=sharing">United Kingdom CPD, Digital Marketing, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/13ENkazYIF60xUxJae6zqYJlrLP4PavuX/view?usp=sharing">CFI CPE, Excel Crash Course - Spreadsheet Formulas for Finance, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1Q9ZtfkGQPzF2QKZSS8kAJHzk5LLGZXr8/view?usp=sharing">CFI CPE, Introduction to ESG, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/13gdmAbV52mT_4Ek-IlrZqWtGv5AW6NhP/view?usp=sharing">Google, Google Analytics for Beginners, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1ZHEsHNdHOVmchKLtno5Zne7URPf0LHRN/view?usp=sharing">Google, Google Analytics for Power Users, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/14YWbijTqcQs36wGPYyIdNEpXiR29PYcB/view?usp=sharing">Google, Advanced Google Analytics, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/12KRlYwCt_lITrXM2yOMBroK0m55Ca3DT/view?usp=sharing">Google, Introduction to Data Studio, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/12KRlYwCt_lITrXM2yOMBroK0m55Ca3DT/view?usp=sharing">Google, Google Analytics 360, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1U2fJf8xR4v7R7bY9SwgmTj5HLnWFZQh6/view?usp=sharing">Google, Google Tag Manager Fundamentals, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1vyW0q2pAkNJPVAYXiS89BcfypvdH1Cz-/view?usp=sharing">Google, The Fundamentals of Digital Marketing, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1ELq_9wu2jtGuelpcSS_rx84yAX-dxX-t/view?usp=sharing">Management and Strategy Institute, Project Management Essentials, Certificate</a></li><br>
+                <li><a href="https://drive.google.com/file/d/1DOh0L7dqRpA0eJXnkR2SkGSsAZnuO1yJ/view?usp=sharing">Management and Strategy Institute, Management and Strategy Institute Ambassador, Certificate</a></li><br>
+                 </h6>
+              </div>
+              <div class="tab-pane container fade" id="Contest awards">
+                <h6>
+                <br>
+                <li>LEGO機器人冬令營競賽 全新竹市國中 <a href="https://drive.google.com/file/d/1XNb3RdK5dRj02ZHGyP8pPm-0dUlbTbI8/view?usp=sharing">Third place</a> , 2016</li><br>
+                <li>亞洲機器人大賽 大專院校 A組 <a href="https://drive.google.com/file/d/1IenDQDJOkEbojqALpEMdGJ1NDj02dmoE/view?usp=sharing">Fourth place</a> , 2020</li><br>
+                <br>
+                </h6>
+              </div>
+              <div class="tab-pane container fade active show" id="About me">
+               <ul>
+                <li><p><h5>When I was in the first year of college ，I found my love for programming language,so I kept studying and learning by myself , From the beginning ，I come into contact with C and C# ，than I bought a book about JAVA ，and let my family teach me more JAVA program compilation .  
+               Now I'm writing small games with my family in JAVA ，and I have been learning HTML 、 CSS and JAVA SCRIPT.</li></h5></p>
+               <li><p><h5>Then , from the second semester of my freshman year to the second year of my sophmore year , I found my love for AI&ML , and I began to study and take classes constantly . I also went to the ML course of my Duke University , Goldsmiths University of London and Google , and I pass exams with high scores , and actually model machine learning to get a certificate through the course .</li></h5></p>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+            <span class="row justify-content-center align-self-center"><h4>Technology Skills</h4></span>
+             <table id="TS"  class="table table-striped table-bordered" style="width:100%">
+            <div id="chart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+    </div>
+  </div>
+
+  <!-- The ContactModal -->
+  <div class="modal fade" id="ContactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Contact</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>Email: <a href="mailto:nickhelp92@gmail.com">nickhelp92@gmail.com</a></p>
+          <p>Line: <a href='https://line.me/ti/p/KvJKL6Eomb'>https://line.me/ti/p/KvJKL6Eomb</a></p>
+          <p>Messenger: <a href='https://m.me/hcyuser'>https://m.me/siao.yc</a></p>
+          <p>Phone: <a href="tel:+886978517504">Phone Call</a></p>
+          
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- The MOSTModal -->
+  <div class="modal fade" id="MOSTModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">Each project has hyperlink for the certificate. <br> Thank you so much professor fo6 taking the time to look at my website.</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+            
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Chart JS -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script type="text/javascript">
+
+          // Make monochrome colors
+          var pieColors = (function () {
+              var colors = [],
+                  base = Highcharts.getOptions().colors[0],i;
+
+              for (i = 0; i < 12; i += 1) {
+                  // Start out with a darkened base color (negative brighten), and end
+                  // up with a much brighter color
+                  colors.push(Highcharts.Color(base).brighten((i - 3) / 7).get());
+              }
+              return colors;
+          }());
+
+          // Build the chart
+          Highcharts.chart('chart', {
+              chart: {
+                  plotBackgroundColor: null,
+                  plotBorderWidth: null,
+                  plotShadow: false,
+                  type: 'pie'
+              },
+              title: {
+                  text: 'Tech Skills'
+              },
+              tooltip: {
+                  pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+              },
+              plotOptions: {
+                  pie: {
+                      allowPointSelect: true,
+                      cursor: 'pointer',
+                      colors: pieColors,
+                      dataLabels: {
+                          enabled: true,
+                          format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+                          distance: -50,
+                          filter: {
+                              property: 'percentage',
+                              operator: '>',
+                              value: 4
+                          }
+                      }
+                  }
+              },
+              series: [{
+                  name: 'Tech Skills',
+                  data: [
+                      { name: 'Java', y: 35 },
+                      { name: 'C/C#', y: 25 },
+                      { name: 'Machine Learning', y: 40 },
+                      { name: 'Deep Learning', y:40 },
+                      { name: 'Html、CSS、JavaScript', y: 25 },
+                      { name: 'Python 、TensorFlow、Keras', y: 60 },
+                      { name: 'Artificial Intelligence', y: 45 },
+                      { name: 'AutoCAD', y: 15 },
+                      { name: 'SolidWorks', y: 15 }
+
+                  ]
+              }]
+          });
+    </script>
+</body>
+</html>
